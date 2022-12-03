@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Link from 'next/link'       
+import { eventList } from '../backend/eventList'
 
 
 export default function Home() {
+
+  console.log(eventList)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,12 +22,12 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Quest for Fest</a>
         </h1>
 
-        <Link href="/auth" className='500 px-5'>Sign Up/ Log In</Link>
+        <Link href="/auth" className='m-20'>Sign Up/ Log In</Link>
         {/* <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p> */}
-
+                                                                            
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Create Events</h2>
@@ -58,7 +62,17 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
+
+        <span className='m-10'>Team name: OK Bye</span>
+        <ul>
+          <li>Nandita Tomar</li>
+          <li>Unnati Bhatia</li>
+          <li>Ishan Jain</li>
+          <li>Sanjeev Kumar</li>
+        </ul>
+        
+
+        {/* <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -67,7 +81,7 @@ export default function Home() {
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
-        </a>
+        </a> */}
       </footer>
     </div>
   )
