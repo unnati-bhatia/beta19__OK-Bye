@@ -1,26 +1,31 @@
-import Link from 'next/link';
-import styles from '../../Card.module.css'
-import Card from "../components/Card";
-
-const UserCard = ({user}) => {
-return (
-<div className={styles.card}>
-
-<Card
-        image="/images/bootcamp1.jpg"
-        title="Fundamentals"
-        description="Hmtl 5 and CSS3, Sass/Scss, Bootstrap and Tailwind, Adobe XD, Git, Github, Devtools"
-        link="https://developer.mozilla.org/en-US/docs/Learn"
-      />
-
-<img src={user.avatar} alt="Avatar" style={{width: '100%'}} />
-<div className={styles.container}>
-<h4><b>{user.first_name} {user.last_name}</b></h4>
-<p>{user.email}</p>
-</div>
-</div>
+import { scoreList } from "../backend/scoreList";
+import CardType1 from "../components/Card1";
+import { eventList } from "../backend/eventList";
+// import List from '@material-ui/core/List';
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from '@chakra-ui/react'
 
 
-);
-}
-export default UserCard;
+let newList = []
+
+export default function CardType01(){
+
+  for( let i=0; i<eventList.length; i++){
+    newList.push(<CardType1 title = {eventList[i].title} event_id = {eventList[i].event_id} />)
+  }
+
+  console.log(newList)
+
+  return(
+    <List>
+      {newList}
+    </List>
+  )
+};
+
+

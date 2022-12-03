@@ -29,18 +29,18 @@ export default function Home() {
         </p> */}
                                                                             
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="" className={styles.card}>
             <h2>Create Events</h2>
             <p>Create custom events with details like date, time and venue.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href="" className={styles.card}>
             <h2>View Past Events</h2>
             <p>See Past Events and their highlights including key sub-events</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href=""
             className={styles.card}
           >
             <h2>Earn Rewards</h2>
@@ -48,7 +48,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className={styles.card}
