@@ -4,6 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -15,6 +16,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "backend/eventList.js", "pages/_app.js", "pages/auth.js"],
   "exclude": ["node_modules"]
 }
